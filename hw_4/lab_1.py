@@ -31,11 +31,11 @@ association_rules = apriori(records, min_support = 0.0045, min_confidence = 0.2,
 association_results = list(association_rules)
 
 # Display the first rule in the association_rules list
-print(association_results[0])
+print("The first rule in the association_rules list:", association_results[0])
 
 # Viewing the Results
 # Display the total number of rules mined by the apriori algorithm
-print(len(association_results))
+print("Total number of rules mined by the apriori algorithm:", len(association_results))
 
 #convert results in a dataframe format
 df_results = pd.DataFrame(association_results)
@@ -45,23 +45,23 @@ df_results.head()
 
 # Method 1: list each rules with their support, confidence, and lift:
 # inspired from https://stackabuse.com/association-rulemining-via-apriori-algorithm-in-python/
-for item in association_results:
-    # first index of the inner list
-    # Contains base item and add item
-    pair = item[0]
-    items = [x for x in pair]
-    print("Rule: " + items[0] + " -> " + items[1])
+# for item in association_results:
+#     # first index of the inner list
+#     # Contains base item and add item
+#     pair = item[0]
+#     items = [x for x in pair]
+#     print("Rule: " + items[0] + " -> " + items[1])
 
-    #second index of the inner list
-    print("Support: " + str(item[1]))
+#     #second index of the inner list
+#     print("Support: " + str(item[1]))
 
-    #third index of the list located at 0th
-    #of the third index of the inner list
+#     #third index of the list located at 0th
+#     #of the third index of the inner list
 
-    print("Confidence: " + str(item[2][0][2]))
-    print("Lift: " + str(item[2][0][3]))
-    print("=====================================")
-print("------------------------------------------------------------------------------------")
+#     print("Confidence: " + str(item[2][0][2]))
+#     print("Lift: " + str(item[2][0][3]))
+#     print("=====================================")
+# print("------------------------------------------------------------------------------------")
 
 # Method 2: list each rules with their support, confidence, and lift:
 # inspired from https://github.com/pirandello/apriori/blob/master/Apriori.ipynb

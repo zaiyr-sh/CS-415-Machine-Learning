@@ -13,7 +13,7 @@ A = np.array(
     [6,10,3]
   ]
 )
-B=np.array(
+B = np.array(
     [
       [8],[4],[0]
     ]
