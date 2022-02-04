@@ -10,7 +10,7 @@ x = data.drop(['No', 'X1 transaction date', 'Y house price of unit area'], axis=
 y = data['Y house price of unit area']
 
 from sklearn.model_selection import train_test_split
-x_train, x_test, y_train, y_test = train_test_split(x,y, random_state = 1, test_size = 0.20)
+x_train, x_test, y_train, y_test = train_test_split(x, y, random_state = 1, test_size = 0.20)
 
 svr = SVR()
 svr.fit(x_train, y_train)
